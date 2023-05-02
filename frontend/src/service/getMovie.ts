@@ -10,7 +10,7 @@ export const getMovie = async (): Promise<Movie[]> => {
   
     const snapshot = await getDocs(movieCollection);
   
-    let seila = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as unknown as Movie));
-    console.log(seila);
-    return seila;
+    let lmovie = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as unknown as Movie));
+    console.log(lmovie);
+    return lmovie;
   };

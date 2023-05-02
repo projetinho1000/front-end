@@ -6,12 +6,12 @@ function Navbar() {
     return (
         <header>
             <nav className="container">
-                <div className="dsmovie-nav-content">
-                    <h1>DSMovie</h1>
-                    <a href="https://github.com/caioed77">
-                        <div className="dsmovie-contact-container">
+                <div className="market-nav-content">
+                    <h1>WebPlace</h1>
+                    <a href="https://github.com/projetinho1000">
+                        <div className="market-contact-container">
                             <GithubIcon />
-                            <p className="dsmovie-contact-link">/Caioed77</p>
+                            <p className="market-contact-link">/Projetin1000</p>
                         </div>
                     </a>
                 </div>

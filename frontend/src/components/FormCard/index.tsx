@@ -4,7 +4,6 @@ import { Movie } from 'types/movie';
 
 import { validateEmail } from 'utils/validate';
 import './styles.css';
-import { addMovie } from 'service/addMovie';
 import { getMovie } from 'service/getMovie';
 
 type Props = {
@@ -25,28 +24,20 @@ function FormCard({ movieId }: Props) {
             return;
         }
             
-        addMovie({
-            id: 1,
-            image: '',
-            count: 2,
-            score: 2.5,
-            title: 'teste'
-
-        })
-
+        getMovie();
     }
 
     return (
-        <div className="dsmovie-form-container">
-            <img className="dsmovie-movie-card-image" src={movie?.image} alt={movie?.title} />
-            <div className="dsmovie-card-bottom-container">
+        <div className="market-form-container">
+            <img className="market-movie-card-image" src={movie?.image} alt={movie?.title} />
+            <div className="market-card-bottom-container">
                 <h3>{movie?.title}</h3>
-                <form className="dsmovie-form" onSubmit={handleSubmit}>
-                    <div className="form-group dsmovie-form-group">
+                <form className="market-form" onSubmit={handleSubmit}>
+                    <div className="form-group market-form-group">
                         <label htmlFor="email">Informe seu email</label>
                         <input type="email" className="form-control" id="email" />
                     </div>
-                    <div className="form-group dsmovie-form-group">
+                    <div className="form-group market-form-group">
                         <label htmlFor="score">Informe sua avaliação</label>
                         <select className="form-control" id="score">
                             <option>1</option>
@@ -56,12 +47,12 @@ function FormCard({ movieId }: Props) {
                             <option>5</option>
                         </select>
                     </div>
-                    <div className="dsmovie-form-btn-container">
-                        <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
+                    <div className="market-form-btn-container">
+                        <button type="submit" className="btn btn-primary market-btn">Salvar</button>
                     </div>
                 </form >
 
-                <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+                <button className="btn btn-primary market-btn mt-3">Cancelar</button>
 
             </div >
         </div >

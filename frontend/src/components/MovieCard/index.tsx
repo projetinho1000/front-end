@@ -10,13 +10,13 @@ function MovieCard( { movie } : Props) {
 
     return (
         <div>
-            <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
-            <div className="dsmovie-card-bottom-container">
+            <img className="market-movie-card-image" src={movie.image} alt={movie.title} />
+            <div className="market-card-bottom-container">
                 <h3>{movie.title}</h3>
                 <MovieScore count={movie.count} score={movie.score} />
 
                 <Link to={`/form/${movie.id}`}>
-                    <div className="btn btn-primary dsmovie-btn">Avaliar</div>
+                    <div className="btn btn-primary market-btn">Avaliar</div>
                 </Link>
 
             </div>

@@ -50,7 +50,7 @@ function MovieStars({ score } : Props) {
   const fills = getFills(score);
 
   return (
-    <div className="dsmovie-stars-container">
+    <div className="market-stars-container">
       <Star fill={fills[0]} />
       <Star fill={fills[1]} />
       <Star fill={fills[2]} />

@@ -1,29 +1,29 @@
 header {
-    background-color: var(--color-primary);
+    background-color:#7700e7;
     height: 60px;
     display: flex;
     align-items: center;
 }
 
-.dsmovie-nav-content {
+.market-nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #7700e7;
+    color: #FFFF;
 }
 
-.dsmovie-nav-content h1 {
+.market-nav-content h1 {
     margin: 0;
     font-weight: 700;
     font-size: 24px;
 }
 
-.dsmovie-contact-container {
+.market-contact-container {
     display: flex;
     align-items: center;
 }
 
-.dsmovie-contact-link {
+.market-contact-link {
     margin: 0 0 0 10px;
     font-size: 12px;
 }

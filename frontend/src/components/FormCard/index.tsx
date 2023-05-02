@@ -5,6 +5,7 @@ import { Movie } from 'types/movie';
 import { validateEmail } from 'utils/validate';
 import './styles.css';
 import { addMovie } from 'service/addMovie';
+import { getMovie } from 'service/getMovie';
 
 type Props = {
     movieId: string;
@@ -23,7 +24,7 @@ function FormCard({ movieId }: Props) {
         if (!validateEmail(email)) {
             return;
         }
-
+            
         addMovie({
             id: 1,
             image: '',

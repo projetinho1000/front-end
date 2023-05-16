@@ -14,4 +14,5 @@ interface addEntity {
 
 export const addMovie = async (item: Movie | addEntity): Promise<void> => {
   await addDoc(movieCollection, item);
+  window.location.href = "http://localhost:3000"
 };

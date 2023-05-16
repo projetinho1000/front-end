@@ -76,12 +76,12 @@ export function Create() {
 
         <div id="spacer" />
         <div id="group-inputs">
-          <button type="button" id="color-red">
+          <p id="color-red">
             Voltar
-          </button>
-          <button onClick={handleSave} id="color-success">
+          </p>
+          <p onClick={handleSave} id="color-success">
             Salvar
-          </button>
+          </p>
         </div>
       </form>
     </main>

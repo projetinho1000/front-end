@@ -40,19 +40,21 @@
     gap: 0.4rem;
 }
 
-#form-create > #group-inputs > button {
+#form-create > #group-inputs > p {
     flex: 1;
     color: white;
     border: none;
     border-radius: 0.2rem;
-    min-height: 3rem;
+    padding: .5rem;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
 }
-#form-create > #group-inputs > button#color-red {
+#form-create > #group-inputs > p#color-red {
     background-color: red;
 }
-#form-create > #group-inputs > button#color-success {
+#form-create > #group-inputs > p#color-success {
     background-color: green;
 }
 

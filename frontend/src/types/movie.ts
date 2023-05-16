@@ -1,9 +1,10 @@
 export type Movie = {
-    id: number;
-    title: string;
-    score: number;
-    count: number;
-    image: string;
+    id: string;
+    description: string;
+    category: string;
+    name: string;
+    url: string;
+    whatsapp: string;
 }
 
 export type MoviePage = {

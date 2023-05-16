@@ -4,6 +4,6 @@ import { doc, updateDoc } from "firebase/firestore";
 
 
 export const updateMovie = async (item: Movie): Promise<void> => {
-    const movieDoc = doc(db, 'movies', item.title);
+    const movieDoc = doc(db, 'movies', item.name);
     await updateDoc(movieDoc, item);
   };

@@ -1,9 +1,9 @@
 import { ReactComponent as Arrow } from 'assets/img/arrow.svg';
-import { MoviePage } from 'types/movie';
+import { RegisterPage } from '@Types/register';
 import './styles.css';
 
 type Props = {
-    page: MoviePage;
+    page: RegisterPage;
     onChange: Function;
 }
 

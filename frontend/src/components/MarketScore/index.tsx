@@ -1,4 +1,4 @@
-import MovieStars from "components/MovieStars";
+import MovieStars from "components/MarketStars";
 import './styles.css';
 
 type Props = {

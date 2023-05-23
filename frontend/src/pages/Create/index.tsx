@@ -13,10 +13,10 @@ export function Create() {
     try {
       addMovie({
         url: image,
-        name,
-        description,
-        category,
-        whatsapp,
+        name: name,
+        description: description,
+        category: category,
+        whatsapp: whatsapp,   
       });
     } catch (error) {
       alert("Erro ao salvar");

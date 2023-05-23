@@ -1,24 +1,25 @@
-import MovieScore from "components/MovieScore";
+import MovieScore from "components/MarketScore";
 import { Link } from "react-router-dom";
-import { Movie } from "types/movie";
+
 import './style.css';
+import { Register } from "@Types/register";
 
 type Props = {
-    movie: Movie;
+    register: Register;
 }
 
-function MovieCard( { movie } : Props) {
+function MovieCard( { register } : Props) {
 
     function abrirWhatsapp(){
-        return window.open(`https://wa.me/55${movie.whatsapp}`, '_black')
+        return window.open(`https://wa.me/55${register.whatsapp}`, '_black')
     }
 
     return (
         <div className="card-container">
-            <img className="market-movie-card-image" src={movie.url} alt={movie.name} />
+            <img className="market-movie-card-image" src={register.url} alt={register.name} />
             <div className="market-card-bottom-container">
-                <h3>{movie.name}</h3>
-                <p>{movie.description}</p>
+                <h3>{register.name}</h3>
+                <p>{register.description}</p>
                 {/* <MovieScore count={movie.count} score={movie.score} /> */}
 
                 <button className="btn-wpp" onClick={() => abrirWhatsapp()}>

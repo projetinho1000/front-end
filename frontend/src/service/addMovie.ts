@@ -1,18 +1,10 @@
 import { collection, addDoc } from "firebase/firestore";
-import { Movie } from "types/movie";
 import { db } from "./firebase";
+import { Register } from "@Types/register";
 
 const movieCollection = collection(db, "movies");
 
-interface addEntity {
-  url: string;
-  name: string;
-  description: string;
-  category: string;
-  whatsapp: string;
-}
-
-export const addMovie = async (item: Movie | addEntity): Promise<void> => {
+export const addMovie = async (item: Register): Promise<void> => {
   await addDoc(movieCollection, item);
   window.location.href = "http://localhost:3000"
 };

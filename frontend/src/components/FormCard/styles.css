@@ -1,20 +1,20 @@
 .market-form-container {
     max-width: 480px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 20px;        
 }
 
 .market-form {
-    width: calc(100% - 20px);
+    width: calc(100% - 20px);    
 }
 
-.market-form-group {
+.market-form-group {    
     margin-bottom: 20px;
 }
 
 .market-form-group label {
     font-size: 12px;
-    color: #aaa;
+    color: #aaa;    
 }
 
 .market-form-btn-container {
@@ -31,12 +31,12 @@
 }
 
 .market-card-bottom-container {
-    background-color: #fff;
+    background-color: #ffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 10px 20px 10px;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;      
 }
 
 .market-card-bottom-container h3 {

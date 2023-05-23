@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Movie } from 'types/movie';
 
 import { validateEmail } from 'utils/validate';
 import './styles.css';
 import { getMovie } from 'service/getMovie';
+import { Register } from '@Types/register';
 
 type Props = {
     movieId: string;
@@ -12,7 +12,7 @@ type Props = {
 
 function FormCard({ movieId }: Props) {
 
-    const [movie, setMovie] = useState<Movie>();
+    const [movie, setMovie] = useState<Register>();
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 
         event.preventDefault();

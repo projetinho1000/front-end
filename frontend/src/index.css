@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
 :root {
   --color-primary: #04f7f7;
-  --color-violet: #7700e7;
+  --color-secundary: #151C48;
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;    
 }
 
 html, body {
-    background-color: #f9faf9;
+    background-color: #DFDFDF;
 }
 
 a, a:hover {

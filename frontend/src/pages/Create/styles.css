@@ -13,7 +13,7 @@
 #form-create > #container-image{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 #form-create > #container-image > img{
     height: 10rem;
@@ -25,19 +25,23 @@
 #form-create > .input-label {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.5rem;
+    margin: 0.1rem;
 }
 #form-create > .input-label> input {
     min-height: 3rem;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     border: none;
-    background-color: #e4e4e4;
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: large;
+    padding: 10px;
 }
 
 #form-create > #group-inputs {
     display: flex;
     flex-direction: row;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 
 #form-create > #group-inputs > p {
@@ -49,7 +53,7 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    cursor: pointer;
+    cursor: pointer;    
 }
 #form-create > #group-inputs > p#color-red {
     background-color: red;

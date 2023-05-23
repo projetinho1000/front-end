@@ -1,5 +1,4 @@
-export type Movie = {
-    id: string;
+export type Register = {
     description: string;
     category: string;
     name: string;
@@ -7,8 +6,8 @@ export type Movie = {
     whatsapp: string;
 }
 
-export type MoviePage = {
-    content: Movie[];
+export type RegisterPage = {
+    content: Register[];
     last: boolean;
     totalPages: number;
     totalElements: number;

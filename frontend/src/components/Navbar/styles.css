@@ -1,5 +1,5 @@
 header {
-    background-color:#7700e7;
+    background-color:#151C48;
     height: 60px;
     display: flex;
     align-items: center;
@@ -13,14 +13,14 @@ header {
 }
 
 .market-nav-content h1 {
-    margin: 0;
+    margin: 0;    
     font-weight: 700;
     font-size: 24px;
 }
 
 .market-contact-container {
     display: flex;
-    align-items: center;
+    align-items: center;    
 }
 
 .market-contact-link {

@@ -10,7 +10,7 @@ function Navbar() {
                 <div className="market-nav-content">
                     
                     <a href="/">
-                        <h1>WebPlace</h1>
+                        <h1>WebMarket</h1>
                     </a>
 
                     <a href="/Create">

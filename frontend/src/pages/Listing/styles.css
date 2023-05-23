@@ -1,0 +1,18 @@
+.market-btn-new {      
+    width: 9rem;
+    text-align: center;
+    border-radius: 0.7rem;    
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: var(--color-secundary);
+}
+
+.market-btn-contact-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.7rem;
+    padding: 0.5rem;
+    margin-top: 1rem;    
+}

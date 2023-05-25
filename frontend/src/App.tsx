@@ -3,6 +3,7 @@ import Listing from "pages/Listing";
 import Form from "pages/Form";
 import Navbar from "components/Navbar";
 import { Create } from "pages/Create";
+import SignIn from "pages/SignIn";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path=":movieId" element={<Form />} />
         </Route>
         <Route path="/create" element={<Create />} />
+        <Route path="/signIn" element={<SignIn />} />
       </Routes>
     </BrowserRouter>
   );

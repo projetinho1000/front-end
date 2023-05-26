@@ -1,5 +1,6 @@
 import { GoogleAuthProvider, User, signInWithPopup } from 'firebase/auth';
 import './styles.css'
+import { GoogleLogo } from 'phosphor-react';
 import { auth } from 'service/firebase';
 import { useState } from 'react';
 
@@ -39,6 +40,7 @@ function SignIn() {
                 </button>
 
                 <button type="button" className="market-button-google" onClick={handleGoogleSignIn}>
+                    <GoogleLogo />
                     Entra com Google
                 </button>
             </div>

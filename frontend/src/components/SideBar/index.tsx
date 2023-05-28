@@ -40,7 +40,7 @@ function SideBar() {
         </div>
         <ul className="menu-links">
           <li className="nav-link">
-            <a href="#">
+            <a href="/signIn">
               <i className="bx bx-home-alt icon"></i>
               <span className="text nav-text">Logout</span>
             </a>

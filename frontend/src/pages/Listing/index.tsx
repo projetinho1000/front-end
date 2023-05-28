@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import MovieCard from "components/MarketCard";
-import Pagination from "components/Pagination";
 import { Register, RegisterPage } from "@Types/register";
 import { getMovie } from "service/getMovie";
 import './styles.css';

@@ -3,22 +3,24 @@ import './styles.css'
 import { GoogleLogo } from 'phosphor-react';
 import { auth } from 'service/firebase';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function SignIn() {
     const [user, setUser] = useState<User>({} as User);
-    
+    const navigate = useNavigate();
+
     function handleGoogleSignIn() {
         const provider = new GoogleAuthProvider();
 
         signInWithPopup(auth, provider)
             .then((result) => {
                 setUser(result.user);
+                navigate('/form');
             })
             .catch((error) => {
                 console.log(error);
             });
     }
-
     
     return (
         <div className="market-container-login">

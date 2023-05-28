@@ -22,13 +22,6 @@ function Listing() {
 
   return (
     <div className="container">
-
-      <a href="/Create">
-        <div className="market-btn-new">
-          <p className="market-btn-contact-link">Inserir</p>
-        </div>
-      </a>
-
       <div className="row">
         {page?.map((movie) => (
           <div key={1} className="col-sm-6 col-lg-4 col-xl-3 mb-3">

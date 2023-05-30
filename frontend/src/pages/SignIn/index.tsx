@@ -1,54 +1,51 @@
-import { GoogleAuthProvider, User, signInWithPopup } from 'firebase/auth';
-import './styles.css'
-import { GoogleLogo } from 'phosphor-react';
-import { auth } from 'service/firebase';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import "./styles.css";
+import { GoogleLogo } from "phosphor-react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "context/authContext";
 
 function SignIn() {
-    const [user, setUser] = useState<User>({} as User);
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const Auth = useAuth();
 
-    function handleGoogleSignIn() {
-        const provider = new GoogleAuthProvider();
-
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                setUser(result.user);
-                navigate('/form');
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+  async function handleGoogleSignIn() {
+    try {
+      await Auth.signInWithGoogle();
+      navigate("/");
+    } catch (error) {
+      alert("Erro ao fazer login");
     }
-    
-    return (
-        <div className="market-container-login">
-            <div className='market-user'>                
-                <small>{user.displayName}</small>
-            </div>
+  }
 
-            <h1>Acesse sua conta </h1>
+  return (
+    <div className="market-container-login">
+      <div className="market-user">
+        <small>{Auth.user?.displayName}</small>
+      </div>
 
-            <div className="market-input">
-                <input type="email" placeholder='Email' />
-                <p />
-                <input type="password" placeholder='Senha' />
-            </div>
+      <h1>Acesse sua conta </h1>
 
-            <div className="btn-container">
-                <button type="button" className="market-button-login">
-                    Entra
-                </button>
+      <div className="market-input">
+        <input type="email" placeholder="Email" />
+        <p />
+        <input type="password" placeholder="Senha" />
+      </div>
 
-                <button type="button" className="market-button-google" onClick={handleGoogleSignIn}>
-                    <GoogleLogo />
-                    Entra com Google
-                </button>
-            </div>
+      <div className="btn-container">
+        <button type="button" className="market-button-login">
+          Entra
+        </button>
 
-        </div>
-    )
+        <button
+          type="button"
+          className="market-button-google"
+          onClick={handleGoogleSignIn}
+        >
+          <GoogleLogo />
+          Entra com Google
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default SignIn;

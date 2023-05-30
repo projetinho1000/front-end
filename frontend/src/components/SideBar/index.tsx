@@ -1,22 +1,19 @@
-import star from '../../assets/img/star-half.svg';
-import './styles.css';
+import { useAuth } from "context/authContext";
+import star from "../../assets/img/star-half.svg";
+import "./styles.css";
 
-function SideBar() {
+function SideBar({ open }: { open: boolean }) {
+  const Auth = useAuth();
   return (
-    <nav className="sidebar-container close">
-      <header>
-        <div className="image-text">
-          <span className="image">
-            <img src={star} alt="logo" />
-          </span>
+    <nav className={`sidebar-container ${open && "open"}`}>
+      <header></header>
 
-          <div className="text header-text">
-            <span className="name">WebMarket</span>
-            <span className="profession">buscas</span>
-          </div>
+      {!!Auth.user?.photoURL && (
+        <div className="image">
+          <img src={Auth.user?.photoURL} />
+          {Auth.user?.displayName}
         </div>
-      </header>
-
+      )}
       <div className="menu-bar">
         <div className="menu">
           <li className="search-box">
@@ -40,10 +37,17 @@ function SideBar() {
         </div>
         <ul className="menu-links">
           <li className="nav-link">
-            <a href="/signIn">
-              <i className="bx bx-home-alt icon"></i>
-              <span className="text nav-text">Logout</span>
-            </a>
+            {!!Auth.user ? (
+              <a onClick={Auth.signOut}>
+                <i className="bx bx-home-alt icon"></i>
+                <span className="text nav-text">Logout</span>
+              </a>
+            ) : (
+              <a onClick={Auth.signInWithGoogle}>
+                <i className="bx bx-home-alt icon"></i>
+                <span className="text nav-text">LogIn</span>
+              </a>
+            )}
           </li>
         </ul>
       </div>

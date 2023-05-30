@@ -5,9 +5,13 @@
     color: #fff;
     position: fixed;
     top: 0;
+    left: -18.75rem;
+    transition: left 0.3s ease-in-out;
+    z-index: 100;
+  }
+  .open{
     left: 0;
   }
-  
   .sidebar-container .image-text {
     display: flex;
     align-items: center;
@@ -18,10 +22,7 @@
     margin-right: 10px;
   }
   
-  .sidebar-container .image img {
-    width: 30px;
-    height: 30px;
-  }
+
   
   .sidebar-container .text.header-text {
     display: flex;
@@ -82,5 +83,17 @@
   
   .sidebar-container .menu-bar .menu-links .nav-link a:hover {
     color: #ff9800;
+  }
+  .image > img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+  .image{
+    padding-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
   

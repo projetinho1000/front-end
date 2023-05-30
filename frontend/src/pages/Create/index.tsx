@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./styles.css";
 import { addMovie } from "service/addMovie";
+import { useNavigate } from "react-router-dom";
 
 export function Create() {
   const [image, setImage] = useState("");
@@ -8,7 +9,7 @@ export function Create() {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
-
+  const navigate = useNavigate();
   function handleSave() {
     try {
       addMovie({
@@ -22,6 +23,11 @@ export function Create() {
       alert("Erro ao salvar");
     }
   }
+
+  function voltar() {
+    navigate("/");
+  }
+
   return (
     <main id="form-create">
       <form id="form-create">
@@ -76,7 +82,7 @@ export function Create() {
 
         <div id="spacer" />
         <div id="group-inputs">
-          <p id="color-red">
+          <p onClick={voltar} id="color-red">
             Voltar
           </p>
           <p onClick={handleSave} id="color-success">

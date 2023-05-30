@@ -7,6 +7,10 @@
     border: none;
     border-radius: 5px;
     padding: 8px 0;
+
+    &:hover {
+        background-color: rgb(6, 165, 6);
+    }
 }
 
 .card-container {

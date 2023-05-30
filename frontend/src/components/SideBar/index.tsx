@@ -1,5 +1,4 @@
 import { useAuth } from "context/authContext";
-import star from "../../assets/img/star-half.svg";
 import "./styles.css";
 
 function SideBar({ open }: { open: boolean }) {
@@ -15,7 +14,7 @@ function SideBar({ open }: { open: boolean }) {
         </div>
       )}
       <div className="menu-bar">
-        <div className="menu">
+        <div className="menu">       
           <li className="search-box">
             <i className="bx bx-search icon"></i>
             <input type="search" placeholder="Search..." />

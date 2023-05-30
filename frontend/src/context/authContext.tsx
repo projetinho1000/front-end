@@ -19,6 +19,7 @@ export const AuthContextrovider: React.FC = (props) => {
       setUser(JSON.parse(userStorage));
     }
   }, []);
+  
   async function signInWithGoogle() {
     const provider = new GoogleAuthProvider();
 

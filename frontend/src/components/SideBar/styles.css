@@ -1,7 +1,7 @@
 .sidebar-container {
     width: 280px;
     height: 100vh;
-    background-color: #333;
+    background-color: var(--color-secundary);
     color: #fff;
     position: fixed;
     top: 0;
@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #444;
+    background-color: #FFFF;
     border-radius: 5px;
     margin-bottom: 10px;
   }
@@ -57,7 +57,7 @@
   .sidebar-container .menu-bar .search-box input[type="search"] {
     background: none;
     border: none;
-    color: #fff;
+    color: black;
     width: 100%;
     outline: none;
   }

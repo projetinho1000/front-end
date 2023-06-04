@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import MovieCard from "components/MarketCard";
-import { Register, RegisterPage } from "@Types/register";
+import { Register } from "@Types/register";
 import { getMovie } from "service/getMovie";
 import "./styles.css";
-import SideBar from "components/SideBar";
 
 function Listing() {
-  const [pageNumber, setPageNumber] = useState(0);
-
   const [page, setPage] = useState<Register[] | null>(null);
 
   useEffect(() => {
@@ -15,10 +12,6 @@ function Listing() {
       setPage(response);
     });
   }, []);
-
-  const handlePageChange = (newPageNumber: number) => {
-    setPageNumber(newPageNumber);
-  };
 
   return (
     <>

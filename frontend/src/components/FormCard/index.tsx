@@ -1,24 +1,18 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
 import { validateEmail } from 'utils/validate';
 import './styles.css';
 import { getMovie } from 'service/getMovie';
-import { Register } from '@Types/register';
+
 
 type Props = {
   movieId: string;
 }
 
 function FormCard({ movieId }: Props) {
-
-  const [movie, setMovie] = useState<Register>();
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 
     event.preventDefault();
 
     const email = (event.target as any).email.value;
-    const score = (event.target as any).score.value;
 
     if (!validateEmail(email)) {
       return;
@@ -29,9 +23,9 @@ function FormCard({ movieId }: Props) {
 
   return (
     <div className="market-form-container">
-      <img className="market-movie-card-image" src={movie?.url} alt={movie?.name} />
+      <img className="market-movie-card-image" src="" alt="" />
       <div className="market-card-bottom-container">
-        <h3>{movie?.name}</h3>
+        <h3>{}</h3>
         <form className="market-form" onSubmit={handleSubmit}>
           <div className="form-group market-form-group">
             <label htmlFor="email">Informe seu email</label>

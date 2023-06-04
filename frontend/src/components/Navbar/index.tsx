@@ -1,4 +1,4 @@
-import { ReactComponent as GithubIcon } from "assets/img/github.svg";
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import iconMenu from "assets/img/menu.svg";
 import "./styles.css";
 import { useAuth } from "context/authContext";

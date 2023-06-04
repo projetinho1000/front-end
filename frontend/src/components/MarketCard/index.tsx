@@ -1,6 +1,3 @@
-import MovieScore from "components/MarketScore";
-import { Link } from "react-router-dom";
-
 import './style.css';
 import { Register } from "@Types/register";
 
@@ -19,17 +16,11 @@ function MovieCard( { register } : Props) {
             <img className="market-movie-card-image" src={register.url} alt={register.name} />
             <div className="market-card-bottom-container">
                 <h3>{register.name}</h3>
-                <p>{register.description}</p>
-                {/* <MovieScore count={movie.count} score={movie.score} /> */}
-
+                <p>{register.description}</p>          
                 <button className="btn-wpp" onClick={() => abrirWhatsapp()}>
                     Whatsapp
                 </button>
-
-                {/* <Link to={`/form/${movie.id}`}>
-                    <div className="btn btn-primary market-btn">Avaliar</div>
-                </Link> */}
-
+    
             </div>
         </div>
     );

@@ -20,3 +20,10 @@
     -moz-box-shadow: 0px 17px 30px -19px rgba(0, 0, 0, 0.54);
     margin-top: 5rem;      
 }
+
+.slug {
+    color: white;
+    font-size: 8px;
+    background-color: #151C48;
+    border-radius: 50%;
+}

@@ -10,13 +10,16 @@ export function Create() {
   const [category, setCategory] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const navigate = useNavigate();
+
+  const categories = category.split(",").map((cat) => cat.trim());
+
   function handleSave() {
     try {
       addMovie({
         url: image,
         name: name,
         description: description,
-        category: category,
+        category: categories,
         whatsapp: whatsapp,   
       });
     } catch (error) {

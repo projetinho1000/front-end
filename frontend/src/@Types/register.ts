@@ -1,6 +1,6 @@
 export type Register = {
     description: string;
-    category: string;
+    category: string[];
     name: string;
     url: string;
     whatsapp: string;

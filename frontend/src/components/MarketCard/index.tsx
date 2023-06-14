@@ -17,11 +17,15 @@ function MovieCard( { register } : Props) {
             <div className="market-card-bottom-container">
                 <h3>{register.name}</h3>
                 <p>{register.description}</p>
-                {
-                    register.category.map(item => {
-                        <span className='slug'>{ item }</span>
-                    })
-                }
+
+                <div className='container-slug'>
+                    {
+                        register.category.map(item => {
+                            return <div className='slug'>{ item }</div>
+                        })
+                    }
+                </div>
+                
                 <button className="btn-wpp" onClick={() => abrirWhatsapp()}>
                     Whatsapp
                 </button>

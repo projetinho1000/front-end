@@ -21,9 +21,18 @@
     margin-top: 5rem;      
 }
 
+.container-slug {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+ 
 .slug {
     color: white;
-    font-size: 8px;
+    font-size: 12px;
+    padding: 2px 4px;
     background-color: #151C48;
-    border-radius: 50%;
+    border-radius: 2px;
 }

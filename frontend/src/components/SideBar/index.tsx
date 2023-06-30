@@ -16,7 +16,7 @@ function SideBar({ open }: { open: boolean }) {
         </div>
       )}
       <div className="menu-bar">
-        <div className="menu">       
+        <div className="menu">
           <li className="search-box">
             <i className="bx bx-search icon"></i>
             <input type="search" placeholder="Search..." />
@@ -31,7 +31,13 @@ function SideBar({ open }: { open: boolean }) {
             <li className="nav-link">
               <a href="#">
                 <i className="bx bx-home-alt icon"></i>
-                <span className="text nav-text">Categorias</span>
+                <span className="text nav-text">Contratos</span>
+              </a>
+            </li>
+            <li className="nav-link">
+              <a href="/form">
+                <i className="bx bx-home-alt icon"></i>
+                <span className="text nav-text">Avaliações</span>
               </a>
             </li>
           </ul>
@@ -46,7 +52,7 @@ function SideBar({ open }: { open: boolean }) {
             ) : (
               <a onClick={Auth.signInWithGoogle}>
                 <i className="bx bx-home-alt icon"></i>
-                <span className="text nav-text">LogIn</span>
+                <span className="text nav-text">Realizar</span>
               </a>
             )}
           </li>

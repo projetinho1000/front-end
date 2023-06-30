@@ -13,12 +13,15 @@ function Navbar() {
     <>
       <header>
         <nav className="container" style={{ zIndex: 1000 }}>
-          <div className="market-nav-content">            
+          <div className="market-nav-content">
             <div className="market-nav-menu" onClick={() => setOpen(!open)}>
               <img src={iconMenu} alt="menu" className="market-nav-icon" />
             </div>
-            <h1 className="market-nav-title">WebMarket</h1>
-          
+            <a href="/">
+              <h1 className="market-nav-title">WebMarket</h1>
+            </a>
+
+
             {Auth.user ? (
               <a onClick={Auth.signOut} className="market-nav-link">
                 <div className="market-contact-container">
@@ -28,7 +31,7 @@ function Navbar() {
             ) : (
               <a onClick={Auth.signInWithGoogle} className="market-nav-link">
                 <div className="market-contact-container">
-                  <p className="market-contact-link">{}</p>
+                  <p className="market-contact-link">Entrar</p>
                 </div>
               </a>
             )}

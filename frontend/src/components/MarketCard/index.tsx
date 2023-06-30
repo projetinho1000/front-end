@@ -16,7 +16,7 @@ function MovieCard( { register } : Props) {
             <img className="market-movie-card-image" src={register.url} alt={register.name} />
             <div className="market-card-bottom-container">
                 <h3>{register.name}</h3>
-                <p>{register.description}</p>
+                    <p>{register.description}</p>
 
                 <div className='container-slug'>
                     {

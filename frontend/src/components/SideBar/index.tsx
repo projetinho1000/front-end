@@ -52,7 +52,7 @@ function SideBar({ open }: { open: boolean }) {
             ) : (
               <a onClick={Auth.signInWithGoogle}>
                 <i className="bx bx-home-alt icon"></i>
-                <span className="text nav-text">Realizar</span>
+                <span className="text nav-text">Realizar login</span>
               </a>
             )}
           </li>
